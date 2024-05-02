@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>GC Adherence Fixer</title>
+    <!-- Genesys stuff -->
+    <link
+      href="https://dhqbrvplips7x.cloudfront.net/common-ui-docs/genesys-webcomponents/3.8.1-178/genesys-webcomponents/genesys-webcomponents.css"
+      rel="stylesheet"
+    />
+    <script
+      type="module"
+      src="https://dhqbrvplips7x.cloudfront.net/common-ui-docs/genesys-webcomponents/3.8.1-178/genesys-webcomponents/genesys-webcomponents.esm.js"
+    ></script>
+  </head>
+  <body>
+    <h1>Adherence Fixer</h1>
+
+    <!-- Your content goes here -->
+    <main>
+      <fieldset>
+        <gux-form-field-dropdown>
+          <gux-dropdown>
+            <gux-listbox>
+              <gux-option value="a">BU 1</gux-option>
+              <gux-option value="b">BU 2</gux-option>
+              <gux-option value="c">BU 3</gux-option>
+            </gux-listbox>
+          </gux-dropdown>
+          <label slot="label">Business Unit</label>
+        </gux-form-field-dropdown>
+        <br />
+        <gux-datepicker
+          mode="range"
+          number-of-months="2"
+          format="dd/mm/yyyy"
+        ></gux-datepicker>
+        <br />
+        <gux-button accent="primary" onclick="notify(event)">Run</gux-button>
+      </fieldset>
+    </main>
+  </body>
+</html>
